@@ -1,21 +1,23 @@
 # netcode-lab
 
-Simula prediction local, latência, interpolação, reconciliação e recoil.
+Explore multiplayer netcode with a local client and server simulation. Adjust latency, send inputs, and watch prediction, interpolation, reconciliation, and recoil.
 
-## Desktop
+## Run
 
-```sh
+Requires the .NET 10 SDK. Browser builds also need the WebAssembly workload: `dotnet workload install wasm-tools`.
+
+### Desktop
+
+~~~sh
 dotnet run --project NetcodeLab.Desktop/NetcodeLab.Desktop.csproj
-```
+~~~
 
-## Browser
+### Browser
 
-Requer o workload wasm-tools do .NET 10.
-
-```sh
+~~~sh
 dotnet run --project NetcodeLab.Browser/NetcodeLab.Browser.csproj
-```
+~~~
 
-## Exemplo
+## Example
 
-Envie uma ação com 200 ms de latência e avance dois ticks.
+Set latency to 200 ms, send an input, and advance a few ticks.
