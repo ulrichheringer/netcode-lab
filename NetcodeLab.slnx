@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="NetcodeLab.Browser/NetcodeLab.Browser.csproj" />
+  <Project Path="NetcodeLab.Desktop/NetcodeLab.Desktop.csproj" />
+  <Project Path="NetcodeLab/NetcodeLab.csproj" />
+</Solution>

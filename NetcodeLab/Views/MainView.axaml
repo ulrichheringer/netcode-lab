@@ -1,0 +1,9 @@
+<UserControl xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:vm="using:NetcodeLab.ViewModels" mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="650" x:Class="NetcodeLab.Views.MainView" x:DataType="vm:MainViewModel">
+  <ScrollViewer><StackPanel Margin="28" Spacing="18" MaxWidth="820" HorizontalAlignment="Center">
+    <TextBlock Text="Netcode Lab" FontSize="30" FontWeight="Bold"/><TextBlock Text="Compare prediction local, autoridade do servidor e interpolação de snapshots." Opacity="0.75"/>
+    <StackPanel Orientation="Horizontal" Spacing="10"><TextBlock Text="Latência (ms)" VerticalAlignment="Center"/><NumericUpDown Value="{Binding LatencyMs}" Minimum="0" Maximum="2000" Increment="50" Width="120"/></StackPanel>
+    <StackPanel Orientation="Horizontal" Spacing="10"><Button Content="Mover + disparar" Command="{Binding SendMoveAndShotCommand}"/><Button Content="Avançar tick (100 ms)" Command="{Binding AdvanceTickCommand}"/><Button Content="Reiniciar" Command="{Binding ResetCommand}"/></StackPanel>
+    <Border Padding="18" CornerRadius="10" Background="#DBEAFE"><StackPanel Spacing="12"><TextBlock Text="{Binding Snapshot}" FontSize="18"/><ProgressBar Minimum="0" Maximum="20" Value="{Binding ServerPosition}" Height="14"/><TextBlock Text="A barra avança com o estado autoritativo do servidor." Opacity="0.65"/></StackPanel></Border>
+    <TextBlock Text="{Binding NetworkStats}" TextWrapping="Wrap"/><TextBlock Text="{Binding Status}" TextWrapping="Wrap"/>
+  </StackPanel></ScrollViewer>
+</UserControl>
